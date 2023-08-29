@@ -1,0 +1,43 @@
+.about{
+    background-color: $veryLightGray;
+    padding-top: $margin-hund;
+}
+.team_name{
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1.15;
+    color: $darkBlue;
+    margin-bottom: 1rem;
+
+    @include breakpoint-up(large){
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+}
+.team_title{
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.15;
+    color: $grayishBlue;
+    margin-bottom: 1rem;
+
+    @include breakpoint-up(large){
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+    }
+}
+
+.about__icon{
+    margin-bottom: 1.5rem;
+
+    @include breakpoint-up(large){
+      margin-bottom: 1.5rem;
+    }    
+  }
+  .tm_img{
+    transition: 0.2s ease-in-out;
+
+}
+.tm_img:hover{
+    transform: translate(0px, -10px);
+}

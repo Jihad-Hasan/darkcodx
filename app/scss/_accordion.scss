@@ -1,0 +1,76 @@
+.faq,.about_h {
+  background-color: $lightGrayishBlue;
+  padding-bottom: 20px;
+}
+
+.active {
+  display: block;
+}
+.accordion-container {
+  border-radius: 100px;
+
+  .accordion-title {
+    position: relative;
+    margin: 10px 0;
+    padding: 1em 2em;
+    font-size: 1em;
+    font-weight: normal;
+    background-color: #fff;
+    color: #2bb7da;
+    cursor: pointer;
+    margin-bottom: 1px;
+    border-radius: 10px;
+
+    &:hover,
+    &:active,
+    &.open {
+      background: #2bb7da;
+      color: #fff;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 25px;
+      width: 15px;
+      height: 2px;
+      transform: rotate(90deg);
+      background: black;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 25px;
+      width: 15px;
+      height: 2px;
+      background: black;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &.open::before {
+      transform: rotate(180deg);
+    }
+
+    &.open::after {
+      opacity: 0;
+    }
+  }
+
+  .accordion-content {
+    background-color: $white;
+    padding-left: 2.3125em;
+    border: 1px solid #eee;
+    border-radius: 15px;
+
+    p {
+      color: #9698a6;
+    }
+  }
+  .active-content {
+    @extend .accordion-content;
+  }
+}
